@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="valentine-confession.css">
+        <title>Para você</title>
+
+        <link rel="icon" type="image/webp" href="correio.jpg">
+
+    </head>
+    <body>
+        <p class="instruction"></p>
+        <div class="container">
+            <audio id="musica-fundo" loop>
+                <source src="Je te laisserai des mots (1).mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+              </audio>
+            <label>
+            <div class="heart">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg"></img>
+            </div>
+            <input id="messageState" type="checkbox" style="display:none"/>
+            </label>
+            <div class="message">
+                <h1 style="font-family: Cinzel, serif; font-size: 40px; letter-spacing: 1.2px;">Querida Stephany,</h1>
+                <p> 
+                    <span>
+                        &emsp; Oii Ster, tudo bem? Espero que sim. Bom, ja faz um tempo que eu quero te contar isso, e acho que essa "carta" é uma boa forma de começar.
+                        Desde o tempo do colégio eu ja sentia algo por você, mas, por achar que ainda nao era o momento certo, e sendo sincero, por vergonha também, 
+                        acabei guardando esses sentimentos dentro de mim. Ate que de um tempo pra cá começamos a conversar mais, ir call e jogar juntos todos os dias e foi ai que tudo aquilo que eu sentia por ti voltou ainda mais forte.
+                        Desde então você tem ocupado um espaço enorme nos meus pensamentos. Lembra quando eu te disse que sonhei contigo? Pois é, não foi so daquela vez, e quando falei que queria te ver la no centro?, era porque eu queria te da umas flores e te ver, mas infelizmente não deu.
+                        Há alguns dias atras contei a minha mãe sobre você, e ela até riu, disse que nunca imaginou ver eu gostando tanto assim de alguém, mas logo disse que, se eu realmente gosto de você, o melhor a fazer seria lhe contar, que se eu guardasse isso pra mim novamente cedo ou tarde eu iria começar a sofrer, e que se fosse pra ser algo bom, Deus ia fazer dar certo.
+                         
+                    </span>
+                    <br> <br>
+                    <span>
+                        Té, eu gosto muito de você, na verdade, eu poderia até dizer um Eu Te Amo mas acho que não seria o suficiente para explicar o que sinto, cada momento com você significa muito pra mim, tem horas que tô ocupado no trabalho, ou em aula no curso e, do nada, começo a lembrar de você, e quando isso acontece é como se tudo ao meu redor sumisse. Gosto de você, do seu jeito, do seu sorriso, da sua risada, dos seus olhos, jogar e conversar com você é sempre a melhor parte do meu dia, gosto muito de quando você me convida pra ir a igreja, e admiro muito a forma como você coloca Deus em primeiro lugar e se dedica com todo o coração ao seu propósito, o brilho que voce traz mesmo sem perceber, ate os momentos de silencio com você são bons. Quando estou contigo tudo fica mais especial e sem que eu perceba meu coração dispara você é muito importante para mim, você trouxe um brilho para a minha vida e me inspira a querer ser melhor, talvez eu não tenha conseguido dizer me expressar da maneira correta, mas oque sinto por ti é algo verdadeiro e vem do fundo do meu coração.                
+                    </span>
+                     <span>
+                        <br> <br> 
+                        &emsp; Pensei muito antes de fazer tudo isso e nao foi facil, tenho medo de ao te contar isso acabar estragando a amizade que a gente ja tem e isso acabar nos afastando, medo da sua reação, medo de estar sendo incoveniente e te deixar desconfortavel, mas o maior medo era de um dia acabar sendo tarde demais pra lhe contar e então com o coração na mão fiz tudo isso. não sei oque voce vai pensar depois de ler e como vai reagir a isso, não quero que se sinta pressionada de forma alguma, mas é a primeira vez que eu sinto isso por alguem e eu precisava muito que você soubesse. Independente do que voce pense sobre tudo isso, quero que saiba que sua amizade já significa muito para mim, você é uma pessoa incrivel e eu desejo que você seja muito feliz, eu sou grato por ter você na minha vida e agradeço a Deus todos os dias por ter te conhecido. Obrigado por você ser você ❤❤ 
+
+                    <br> <br>   
+                    <p class="versiculo" onclick="mostrarTextoVersiculo()">Cantares 4:9</p>
+<p id="texto-versiculo">Cativaste o meu coração, com um só dos teus olhares, com uma única joia do teu colar. 💞</p>
+                    </span>      
+                </p>
+                <br>
+                <div class="sincere">
+                    <p style="font-weight: bold;"> Com carinho,</p>
+                    <p>Willyam</p>
+                 </div>
+                 <div style="text-align: center; margin-top: 30px;">
+                    <button 
+                      onclick="document.getElementById('final-message').classList.add('show')" 
+                      style="background-color: #f48fb1; border: none; padding: 10px 20px; border-radius: 20px; font-family: 'Quicksand'; cursor: pointer; font-size: 16px;">
+                      💌 Clique aqui
+                    </button>
+                    <p id="final-message" style="margin-top: 15px; font-style: italic;">
+                      Talvez essa carta não mude o mundo, mas ela mudou o meu só por ser pra você. 💖
+                    </p>
+                  </div>
+            </div>
+        </div>
+        
+        <script src="jquery.js"></script>
+        <script src="jquery2.1.js"></script>
+        <script defer src="valentine-confession.js"></script>
+    </body>
+</html>

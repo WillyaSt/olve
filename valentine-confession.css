@@ -1,0 +1,285 @@
+*{
+	box-sizing: border-box;
+}
+
+h1,
+p {
+	font-family: "Quicksand";
+  font-optical-sizing: auto;
+}
+
+h1 {
+	font-weight: 200;
+}
+
+body {
+	margin: 0px;
+}
+
+.instruction{
+	position: absolute;
+	font-size: 1.6rem;
+	color: rgba(255, 0, 0, 0.554);
+	top: 36%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.heart {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	transition: transform 2s;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.heart > img {
+	width: px;
+	height: 75px;
+	animation: beat 1.3s ease-in-out infinite;
+	transform-origin: center;
+  }
+
+.message {
+	padding: 25px;
+	background-color: #ffffff;
+	font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+	font-size: clamp(16px, 10vw, 17px);
+	text-align: justify;
+	line-height: 1.5em;
+	width: 80%;
+	max-width: 550px;
+	height: 78%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+
+	animation-name: openmsg;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	border-radius: 5px;
+	overflow: scroll;
+	scrollbar-width: none;
+}
+ 
+.message .sincere{
+	text-align: left;
+	font-family: "Cinzel, serif";
+	font-size: 14px;
+	line-height: 1.2em;
+}
+
+.message .sincere p{
+	margin: 0;
+}
+@keyframes beat {
+	0%, 100% {
+	  transform: scale(1);
+	}
+	25% {
+	  transform: scale(1.12);
+	}
+	50% {
+	  transform: scale(0.95);
+	}
+	75% {
+	  transform: scale(1.1);
+	}
+  }
+
+@keyframes openmsg {
+	0% {
+		height: 0px;
+		padding: 0px 20px;
+	}
+	100% {
+		height: 75%;
+		padding: 20px 20px;
+	}
+}
+
+@keyframes heartMove {
+	0% {
+		top: 50%
+	}
+	100% {
+		top: 85%;
+		transform: translate(-50%, 0);
+	}
+}
+
+.openNor {
+	animation-direction: normal;
+	animation-play-state: running;
+}
+
+.closeNor {
+	animation-direction: reverse;
+	animation-play-state: running;
+}
+
+.no-anim {
+	animation: none;
+}
+
+.closed {
+	height: 0px;
+	padding: 0px 20px;
+}
+
+.bottom {
+	bottom: 5px;
+}
+
+.openHer {
+	animation-name: heartMove;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+}
+
+.closeHer {
+	animation-name: heartMove;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-play-state: running;
+	animation-direction: reverse;
+	animation-fill-mode: forwards;
+}
+
+.beating > img {
+	animation-name: beat;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+}
+
+.openedHer {
+	top: 85%;
+	transform: translate(-50%, 0);
+}
+.fade-in-text span {
+	display: inline-block;
+	opacity: 0;
+	transform: translateY(10px);
+	animation: fadeIn 0.6s ease forwards;
+	animation-delay: calc(var(--i) * 0.1s);
+  }
+  
+  @keyframes fadeIn {
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  #final-message {
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+#final-message.show {
+	opacity: 1;
+}
+@keyframes cair {
+	to {
+	  transform: translateY(110vh);
+	  opacity: 0;
+	}
+  }
+  
+  .coraçao-solto {
+	position: fixed;
+	top: -5vh;
+	font-size: 22px;
+	animation: cair 3s ease-out forwards;
+	pointer-events: none;
+	z-index: 999;
+  }
+  .versiculo {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	color: #d81b60;
+	cursor: pointer;
+	animation: pulsar 1.5s infinite ease-in-out;
+	margin-top: 20px;
+  }
+  
+  @keyframes pulsar {
+	0% {
+	  transform: scale(1);
+	}
+	50% {
+	  transform: scale(1.08);
+	}
+	100% {
+	  transform: scale(1);
+	}
+  }
+  
+  #texto-versiculo {
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	text-align: center;
+	color: #880e4f;
+	font-style: italic;
+	transition: all 1s ease;
+	font-size: 16px;
+  }
+  
+  #texto-versiculo.show {
+	opacity: 1;
+	max-height: 200px;
+	margin-top: 10px;
+  }
+  button:hover {
+	box-shadow: 0 0 15px #f48fb1;
+	transform: scale(1.05);
+	transition: all 0.3s ease;
+}
+.heart img:hover {
+	filter: drop-shadow(0 0 10px #f48fb1);
+	transform: scale(1.05);
+	transition: 0.3s;
+}
+body {
+	background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+	background-color: #fffafc;
+}
+.message {
+	background: #ffffff;
+	border-radius: 16px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	padding: 40px;
+	max-width: 700px;
+	margin: auto;
+}
+body {
+	font-family: 'Playfair Display', serif;
+	font-size: 17px;
+	line-height: 1.8;
+	color: #444;
+}
+.message:hover {
+	box-shadow: 0 0 40px rgba(248, 187, 208, 0.4);
+	transition: box-shadow 0.4s ease;
+}
